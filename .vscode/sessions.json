@@ -1,0 +1,46 @@
+{
+    "$schema": "https://cdn.statically.io/gh/nguyenngoclongdev/cdn/main/schema/v10/terminal-keeper.json",
+    "theme": "tribe",
+    "active": "default",
+    "activateOnStartup": true,
+    "keepExistingTerminals": false,
+    "sessions": {
+        "default": [
+            {
+                "name": "oauth-server",
+                "autoExecuteCommands": true,
+                "icon": "lock-small",
+                "color": "terminal.ansiRed",
+                "commands": [
+                    "cd spring-oauth-server && ./mvnw spring-boot:run"
+                ]
+            },
+            {
+                "name": "chat-server",
+                "autoExecuteCommands": true,
+                "icon": "callhierarchy-incoming",
+                "color": "terminal.ansiBrightMagenta",
+                "commands": [
+                    "cd spring-chat-server && ./mvnw spring-boot:run"
+                ]
+            },
+            {
+                "name": "chat-client",
+                "autoExecuteCommands": true,
+                "icon": "call-outgoing",
+                "color": "terminal.ansiRed",
+                "commands": [
+                    "cd spring-chat-client && ./mvnw spring-boot:run"
+                ]
+            }
+        ],
+        "saved-session": [
+            {
+                "name": "connect",
+                "commands": [
+                    ""
+                ]
+            }
+        ]
+    }
+}
