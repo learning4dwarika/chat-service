@@ -12,7 +12,7 @@
                 "icon": "lock-small",
                 "color": "terminal.ansiRed",
                 "commands": [
-                    "cd spring-oauth-server && ./mvnw spring-boot:run"
+                    "cd spring-oauth-server; ./mvnw spring-boot:run"
                 ]
             },
             {
@@ -21,7 +21,7 @@
                 "icon": "callhierarchy-incoming",
                 "color": "terminal.ansiBrightMagenta",
                 "commands": [
-                    "cd spring-chat-server && ./mvnw spring-boot:run"
+                    "cd spring-chat-server; ./mvnw spring-boot:run"
                 ]
             },
             {
@@ -30,7 +30,7 @@
                 "icon": "call-outgoing",
                 "color": "terminal.ansiRed",
                 "commands": [
-                    "cd spring-chat-client && ./mvnw spring-boot:run"
+                    "cd spring-chat-client; ./mvnw spring-boot:run"
                 ]
             }
         ],
