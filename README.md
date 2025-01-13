@@ -143,7 +143,7 @@ curl --location 'http://localhost:8081/hello' \
 
 ### From Browser
 
-1. Invoke http://localhost:8082/message from browser.
+1. Invoke http://127.0.0.1:8082/message from browser.
 2. It gets redirected to oauth server at http://localhost:8080/login asking for user credentials
 3. Enter the username and password.
 4. Consent screen appears. allow it.

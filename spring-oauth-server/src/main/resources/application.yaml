@@ -4,28 +4,3 @@ server:
 spring:
   application.name: spring-oauth-server
   output.ansi.enabled: ALWAYS
-  security:
-    oauth2:
-      authorizationserver:
-        client:
-          demo-client:
-            require-authorization-consent: true
-            registration:
-              client-id: demo-client
-              client-secret: "{noop}ourtopsecretsecret"
-              authorization-grant-types:
-                - client_credentials
-                - authorization_code
-                - refresh_token
-              redirect-uris: 
-                - "http://127.0.0.1:8082/login/oauth2/code/reg-client"
-                - "http://localhost:8082/login/oauth2/code/reg-client"
-              scopes: 
-                - "api.read"
-                - "api.write"
-                - "user.read"
-                - openid
-              client-authentication-methods:
-                - client_secret_basic
-                # - authorization_code
-
