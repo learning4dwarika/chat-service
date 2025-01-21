@@ -173,3 +173,36 @@ This returns a `JSESSIONID` in response `Cookie`.
 11. The same `JSESSIONID` is included with the call to http://127.0.0.1:8082/message which is works and brings the valid response.
 
 
+# Migrate from in-memory to database-
+
+1. Add dependencies to pom.xml.
+
+```
+        <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jdbc</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+```
+
+2. Configure Datasource
+
+```
+  datasource:
+    url: jdbc:postgresql://localhost/postgres
+    username: postgres
+    password: postgres
+  sql:
+    init:
+      mode: always
+```
+
+3. registeredClientRepository takes a `JdbcTemplate` and returns `JdbcRegisteredClientRepository`.
+4. UserDetailsService is replaced with `JdbcUserDetailsManager` taking a `Datasource` as param.
+5. ApplicationRunner takes this JdbcUserDetailsManager as param, validates and updates the UserDetails to DB. 
