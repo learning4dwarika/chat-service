@@ -33,5 +33,6 @@ $ terraform plan -out tfplan -var "aws_profile=mfa" -var "aws_region=ap-south-1"
 or 
 ```
 terraform plan --out=./terraform-cache/deploy.tfplan
+
 terraform apply -auto-approve --input=false ./terraform-cache/deploy.tfplan
 ```
