@@ -1,9 +1,10 @@
 terraform {
   backend "s3" {
-    bucket  = "vca-aws-tf-state-global"
+    bucket  = "dwchatapp-aws-tf-state"
     region  = "ap-south-1"
     key     = "DEV/terraform.tfstate"
     encrypt = true
+    profile = "mfa"
   }
 
   required_providers {
